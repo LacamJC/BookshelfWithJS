@@ -10,7 +10,7 @@ function cadBook(title = aleatoryTitle(), pages = aleatoryPages(100,500), author
     const book = new Book(title, pages, author, id)
 
     bookShelf.push(book);
-    return console.log(book);
+    
 }
 
 function aleatoryPages(min,max)
@@ -32,7 +32,7 @@ function aleatoryTitle()
     return title;
 }
 
-for(i=0; i < 6; i++)
+for(let i=0; i < arrayTitle.length; i++)
 {
     cadBook();
     if(i==5)
@@ -40,8 +40,4 @@ for(i=0; i < 6; i++)
         console.log(`Books in system : ${bookShelf.length}`)
     }
 }
-
-
-
-// console.log(cadBook());
 
