@@ -6,11 +6,9 @@ const bookShelf = [];
 
 function cadBook(title = aleatoryTitle(), pages = aleatoryPages(100,500), author = aleatoryAuthor(), id = bookShelf.length)
 {
-
     const book = new Book(title, pages, author, id)
 
-    bookShelf.push(book);
-    
+    return bookShelf.push(book);
 }
 
 function aleatoryPages(min,max)
@@ -32,12 +30,23 @@ function aleatoryTitle()
     return title;
 }
 
-for(let i=0; i < arrayTitle.length; i++)
+for(let i=0; i < (arrayTitle.length + 1); i++)
 {
     cadBook();
-    if(i==5)
-    {
-        console.log(`Books in system : ${bookShelf.length}`)
-    }
+
+    // let book = bookShelf[i]
+    // console.log(`
+    // The name of this book is ${book.getTitle()}
+    // Have ${book.getPages()} pages
+    // Its about tecnology and programing languages
+    // Your author, is ${book.getAuthor()} !
+    // `)
 }
+
+console.log(bookShelf)
+
+// for(let i=0;i<(bookShelf.length);i++)
+// {
+//     console.log(bookShelf[i].getTitle())
+// }
 
